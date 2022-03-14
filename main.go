@@ -6,7 +6,7 @@ func main() {
 	conferenceName := "Flexera Conference"
 	const conferenceTickets int = 50
 	var remainingTickets uint = 50 
-	var bookings [50]string 
+	var bookings []string //slice  with out the set ammount in the array 
 
 	fmt.Printf("conferenceTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceName)
 
@@ -33,12 +33,12 @@ func main() {
 	fmt.Scan(&userTickets)
 
 	remainingTickets = remainingTickets - userTickets
-	bookings [0] = firstName + " " + lastName 
+	bookings = append(bookings, firstName + " " + lastName)
 
-	fmt.Printf("The whole array: %v\n", bookings)
+	fmt.Printf("The whole slice: %v\n", bookings)
 	fmt.Printf("The first value: %v\n", bookings [0])
-	fmt.Printf("Array type: %T\n", bookings)
-	fmt.Printf("Array length: %v\n", len(bookings))
+	fmt.Printf("Slice type: %T\n", bookings)
+	fmt.Printf("Slice length: %v\n", len(bookings))
 
 
 
